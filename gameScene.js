@@ -116,14 +116,14 @@ class GameScene extends Phaser.Scene {
     // Display number of customers left
     gameState.customerCountText = this.add.text(gameState.cam.worldView.right - 20, 80, `Customers left: ${gameState.customersLeftCount}`, { fontSize: '15px', fill: '#000000' }).setOrigin(1);
 
-    //Display burgers served
+ /*   //Display burgers served
     gameState.burgersServed = this.add.text(gameState.cam.worldView.right - 20, 200, `Burgers served: ${gameState.burgersServedCount}`, { fontSize: '15px', fill: '#000000' }).setOrigin(1);
 
     //Display fries served
     gameState.friesServed = this.add.text(gameState.cam.worldView.right - 20, 220, `Fries served: ${gameState.friesServedCount}`, { fontSize: '15px', fill: '#000000' }).setOrigin(1);
     
     //Display shakes served
-    gameState.shakesServed = this.add.text(gameState.cam.worldView.right - 20, 240, `Shakes served: ${gameState.shakesServedCount}`, { fontSize: '15px', fill: '#000000' }).setOrigin(1);
+    gameState.shakesServed = this.add.text(gameState.cam.worldView.right - 20, 240, `Shakes served: ${gameState.shakesServedCount}`, { fontSize: '15px', fill: '#000000' }).setOrigin(1); */
     
 
     
@@ -231,21 +231,21 @@ class GameScene extends Phaser.Scene {
     if (Phaser.Input.Keyboard.JustDown(gameState.keys.A)) {
       this.placeFood('Burger', 5);
       gameState.burgersServedCount ++;
-      gameState.burgersServed.setText(`Burgers Served: ${gameState.burgersServedCount}`)
+      //gameState.burgersServed.setText(`Burgers Served: ${gameState.burgersServedCount}`)
     }
 
     // Press S to put fries on the tray
     if (Phaser.Input.Keyboard.JustDown(gameState.keys.S)) {
       this.placeFood('Fries', 3);
       gameState.friesServedCount ++;
-      gameState.friesServed.setText(`Fries Served: ${gameState.friesServedCount}`)
+      //gameState.friesServed.setText(`Fries Served: ${gameState.friesServedCount}`)
     }
 
     // Press D to put a shake on the tray
     if (Phaser.Input.Keyboard.JustDown(gameState.keys.D)) {
       this.placeFood('Shake', 1);
       gameState.shakesServedCount ++;
-      gameState.shakesServed.setText(`Shakes Served: ${gameState.shakesServedCount}`)
+      //gameState.shakesServed.setText(`Shakes Served: ${gameState.shakesServedCount}`)
     }
 
     // Press Enter to serve the meal
@@ -350,7 +350,17 @@ class GameScene extends Phaser.Scene {
           break;
       }
 
-      gameState.currentMeal.create(Xposition, gameState.tray.y, food).setScale(0.5);
+      const food1 = gameState.currentMeal.create(Xposition, gameState.tray.y, food).setScale(0.7);
+      this.tweens.add({
+        targets: food1,
+        scaleX: 0.5,
+        scaleY: 0.5,
+        duration: 50,
+        ease: 'Linear',
+      });
+     
+
+      
       gameState.currentMeal.fullnessValue += fullnessValue;
       
       //change block colors to show what is remaining on order

@@ -26,56 +26,55 @@ class GameScene extends Phaser.Scene {
 
   preload() {
     // Preload images
-    const baseURL = 'https://content.codecademy.com/courses/learn-phaser/fastfoodie/';
-    this.load.image('Chef', `${baseURL}art/Chef.png`);
-    this.load.image('Customer-1', `${baseURL}art/Customer-1.png`);
-    this.load.image('Customer-2', `${baseURL}art/Customer-2.png`);
-    this.load.image('Customer-3', `${baseURL}art/Customer-3.png`);
-    this.load.image('Customer-4', `${baseURL}art/Customer-4.png`);
-    this.load.image('Customer-5', `${baseURL}art/Customer-5.png`);
-    this.load.image('Floor-Server', `${baseURL}art/Floor-Server.png`);
-    this.load.image('Floor-Customer', `${baseURL}art/Floor-Customer.png`);
-    this.load.image('Tray', `${baseURL}art/Tray.png`);
-    this.load.image('Barrier', `${baseURL}art/Barrier.png`);
-    this.load.image('Star-full', `${baseURL}art/Star-full.png`);
-    this.load.image('Star-half', `${baseURL}art/Star-half.png`);
-    this.load.image('Star-empty', `${baseURL}art/Star-empty.png`);
+    this.load.image('Chef', `art/Chef.png`);
+    this.load.image('Customer-1', `art/Customer-1.png`);
+    this.load.image('Customer-2', `art/Customer-2.png`);
+    this.load.image('Customer-3', `art/Customer-3.png`);
+    this.load.image('Customer-4', `art/Customer-4.png`);
+    this.load.image('Customer-5', `art/Customer-5.png`);
+    this.load.image('Floor-Server', `art/Floor-Server.png`);
+    this.load.image('Floor-Customer', `art/Floor-Customer.png`);
+    this.load.image('Tray', `art/Tray.png`);
+    this.load.image('Barrier', `art/Barrier.png`);
+    this.load.image('Star-full', `art/Star-full.png`);
+    this.load.image('Star-half', `art/Star-half.png`);
+    this.load.image('Star-empty', `art/Star-empty.png`);
 
     // Preload song
     this.load.audio('gameplayTheme', [
-      `${baseURL}audio/music/2-gameplayTheme.ogg`,
-      `${baseURL}audio/music/2-gameplayTheme.mp3`
+      `audio/music/2-gameplayTheme.ogg`,
+      `audio/music/2-gameplayTheme.mp3`
     ]); // Credit: "Pixel Song #18" by hmmm101: https://freesound.org/people/hmmm101
 
     // Preload SFX
     this.load.audio('placeFoodSFX', [
-      `${baseURL}audio/sfx/placeFood.ogg`,
-      `${baseURL}audio/sfx/placeFood.mp3`
+      `audio/sfx/placeFood.ogg`,
+      `audio/sfx/placeFood.mp3`
     ]); // Credit: "action_02.wav" by dermotte: https://freesound.org/people/dermotte
 
     this.load.audio('servingCorrectSFX', [
-      `${baseURL}audio/sfx/servingCorrect.ogg`,
-      `${baseURL}audio/sfx/servingCorrect.mp3`
+      `audio/sfx/servingCorrect.ogg`,
+      `audio/sfx/servingCorrect.mp3`
     ]); // Credit: "Video Game SFX Positive Action Long Tail" by rhodesmas: https://freesound.org/people/djlprojects
 
     this.load.audio('servingIncorrectSFX', [
-      `${baseURL}audio/sfx/servingIncorrect.ogg`,
-      `${baseURL}audio/sfx/servingIncorrect.mp3`
+      `audio/sfx/servingIncorrect.ogg`,
+      `audio/sfx/servingIncorrect.mp3`
     ]); // Credit: "Incorrect 01" by rhodesmas: https://freesound.org/people/rhodesmas
 
     this.load.audio('servingEmptySFX', [
-      `${baseURL}audio/sfx/servingEmpty.ogg`,
-      `${baseURL}audio/sfx/servingEmpty.mp3`
+      `audio/sfx/servingEmpty.ogg`,
+      `audio/sfx/servingEmpty.mp3`
     ]); // Credit: "Computer Error Noise [variants of KevinVG207's Freesound#331912].wav" by Timbre: https://freesound.org/people/Timbre
 
     this.load.audio('fiveStarsSFX', [
-      `${baseURL}audio/sfx/fiveStars.ogg`,
-      `${baseURL}audio/sfx/fiveStars.mp3`
+      `audio/sfx/fiveStars.ogg`,
+      `audio/sfx/fiveStars.mp3`
     ]); // Credit: "Success 01" by rhodesmas: https://freesound.org/people/rhodesmas
 
     this.load.audio('nextWaveSFX', [
-      `${baseURL}audio/sfx/nextWave.ogg`,
-      `${baseURL}audio/sfx/nextWave.mp3`
+      `audio/sfx/nextWave.ogg`,
+      `audio/sfx/nextWave.mp3`
     ]); // Credit: "old fashion radio jingle 2.wav" by rhodesmas: https://freesound.org/people/chimerical
   }
 
@@ -171,7 +170,7 @@ class GameScene extends Phaser.Scene {
             duration: 750,
             ease: 'Power2'
           });
-        }
+        } 
       }
 
       // Move the new current customer to be served

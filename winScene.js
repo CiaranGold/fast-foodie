@@ -6,13 +6,13 @@ class WinScene extends Phaser.Scene {
 
   preload() {
     // Preload screen
-    const baseURL = 'https://content.codecademy.com/courses/learn-phaser/fastfoodie/';
-    this.load.image('win', `${baseURL}art/win_screen.png`);
+    
+    this.load.image('win', `art/win_screen.png`);
 
     // Preload song
     this.load.audio('winTheme', [
-      `${baseURL}audio/music/3-winTheme.ogg`,
-      `${baseURL}audio/music/3-winTheme.mp3`
+      `audio/music/3-winTheme.ogg`,
+      `audio/music/3-winTheme.mp3`
     ]); // Credit: "Pixel Song #18" by hmmm101: https://freesound.org/people/hmmm101
   }
 

@@ -6,13 +6,12 @@ class LoseScene extends Phaser.Scene {
 
   preload() {
     // Preload screen
-    const baseURL = 'https://content.codecademy.com/courses/learn-phaser/fastfoodie/';
-    this.load.image('lose', `${baseURL}art/lose_screen.png`);
+    this.load.image('lose', `art/lose_screen.png`);
 
     // Preload song
     this.load.audio('loseTheme', [
-      `${baseURL}audio/music/4-loseTheme.ogg`,
-      `${baseURL}audio/music/4-loseTheme.mp3`
+      `audio/music/4-loseTheme.ogg`,
+      `audio/music/4-loseTheme.mp3`
     ]); // Credit: "Pixel Song #18" by hmmm101: https://freesound.org/people/hmmm101
   }
 
